@@ -108,10 +108,10 @@ ontop_fcontext:
     move  $a0, $a3
 
     # adjust stack
-    addi.d    $sp, $sp, 160
+    addi.d  $sp, $sp, 160
 
     # jump to context
-    jr    $a2
+    jr  $a2
 .size ontop_fcontext, .-ontop_fcontext
 
 /* Mark that we don't need executable stack.  */

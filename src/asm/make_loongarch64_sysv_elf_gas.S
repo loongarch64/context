@@ -45,8 +45,7 @@
 .type make_fcontext,@function
 make_fcontext:
     # shift address in A0 to lower 16 byte boundary
-    li.d  $t0, 0xfffffffffffffff0
-    and  $a0, $a0, $t0
+    bstrins.d $a0, $zero, 3, 0
 
     # reserve space for context-data on context-stack
     addi.d  $a0, $a0, -160
